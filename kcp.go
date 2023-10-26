@@ -1021,8 +1021,6 @@ func (kcp *KCP) NoDelay(nodelay, interval, resend, nc int) int {
 	if interval >= 0 {
 		if interval > 5000 {
 			interval = 5000
-		} else if interval < 10 {
-			interval = 10
 		}
 		kcp.interval = uint32(interval)
 	}
